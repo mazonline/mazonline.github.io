@@ -1,15 +1,12 @@
-#!/usr/local/bin/python
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 
-from selenium import selenium
-import unittest, time, re
-   def setUp(self):
-        self.verificationErrors = []
-        # This is an empty array where we will store any verification errors
-        # we find in our tests
-
-        self.selenium = selenium("localhost", 4444, "*firefox","http://mazonline.github.io/index.html/")
-        self.selenium.start()
-        # We instantiate and start the browser
-
-      
-      #https://github.com/mozilla/geckodriver/releases/download/v0.20.1/geckodriver-v0.20.1-linux32.tar.gz
+driver = webdriver.Firefox()
+driver.get("http://www.python.org")
+assert "Python" in driver.title
+elem = driver.find_element_by_name("q")
+elem.clear()
+elem.send_keys("pycon")
+elem.send_keys(Keys.RETURN)
+assert "No results found." not in driver.page_source
+driver.close()
