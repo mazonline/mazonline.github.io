@@ -11,4 +11,8 @@ pip install selenium
 
 #links 
 wget https://github.com/mozilla/geckodriver/releases/download/v0.20.1/geckodriver-v0.20.1-linux32.tar.gz
+tar xfvz geckodriver-v0.20.1-linux32.tar.gz
+chmod +x geckodriver 
+mv geckodriver /usr/local/bin
 wget https://chromedriver.storage.googleapis.com/2.38/chromedriver_linux64.zip
+wget "https://mazonline.github.io/code.py"
