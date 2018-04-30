@@ -6,7 +6,7 @@ apt-get install -y wget
 apt-get install -y python-pip
 apt-get install -y vim
 apt-get install -y curl
-apt-get install -y firefox
+#apt-get install -y firefox
 pip install selenium 
 
 #links 
