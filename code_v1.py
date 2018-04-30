@@ -9,9 +9,7 @@ os.environ['MOZ_HEADLESS'] = '1'
 
 class MailingListTest(unittest.TestCase):
     def setUp(self):
-        binary = FirefoxBinary('C:\\Program Files\\Mozilla Firefox\\firefox.exe',
-                               log_file=sys.stdout)
-        self.driver = webdriver.Firefox(firefox_binary=binary)
+        self.driver = webdriver.Firefox()
 
     def test_two_visits(self):
         self.fail("There is nothing here!")
