@@ -9,7 +9,9 @@ from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 class PythonOrgSearch(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Firefox()
+        options = Options()
+        options.add_argument("--headless")
+        self.driver = webdriver.Firefox(firefox_options=options)
 
     def test_search_in_python_org(self):
         driver = self.driver
